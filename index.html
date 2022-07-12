@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiktok Download</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+<body>
+    <div class="d-flex align-items-center h-100 w-100 justify-content-center">
+        <form class="w-25" onsubmit="submitTiktok(event)">
+            <div class="form-group text-center">
+              <label class="d-none" for="video_url">Tiktok Video URL</label>
+              <input type="url" class="form-control text-center" name="video_url" id="video_url" aria-describedby="urlHelp" placeholder="Enter video URL">
+              <small id="urlHelp" class="form-text text-muted">Paste your video URL.</small>
+            </div>
+            <button type="submit" class="btn btn-primary mx-auto d-block">Submit</button>
+          </form>
+    </div>
+    <div class="d-flex align-items-center h-100 w-100 justify-content-center">
+        <div id="result"></div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    async function submitTiktok(event){
+        event.preventDefault();
+        const video_input = document.getElementById('video_url');
+        console.log(video_input.value)
+        const data = {
+            video_url: video_input.value
+        }
+        let res = await axios.post('./get-video', data);
+        console.log(res.data.url);
+
+        const videoEl = document.createElement('video', {text: 'Your browser does not support the video tag'});
+        videoEl.setAttribute("autoplay", true);
+        videoEl.setAttribute('controls', true);
+        let sourceEl = document.createElement('source');
+        sourceEl.setAttribute("src", res.data.url);
+        videoEl.append(sourceEl);
+        while (document.getElementById('result').firstChild) {
+            document.getElementById('result').firstChild.remove()
+        }
+        document.getElementById('result').append(videoEl)
+    }
+</script>
+</body>
+</html>
