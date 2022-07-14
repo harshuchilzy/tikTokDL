@@ -4,23 +4,93 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tiktok Download</title>
+    <title>DLTOK.IO</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./root/custom.css">
+
 </head>
 <body>
-    <div class="d-flex align-items-center h-100 w-100 justify-content-center">
-        <form class="w-25" onsubmit="submitTiktok(event)">
-            <div class="form-group text-center">
-              <label class="d-none" for="video_url">Tiktok Video URL</label>
-              <input type="url" class="form-control text-center" name="video_url" id="video_url" aria-describedby="urlHelp" placeholder="Enter video URL">
-              <small id="urlHelp" class="form-text text-muted">Paste your video URL.</small>
+    <div class="container">
+        <div class="row mt-2">
+            <div class="col-12">
+                <div class="d-flex align-items-center justify-content-between">
+                    <a class="header-btn btn btn-sm text-uppercase font-weight-bold" href="#">How to download Tiktok videos</a>
+                    <a class="header-btn btn btn-sm text-uppercase font-weight-bold" href="#">Download Tiktik Audio (MP3)</a>
+                </div>
             </div>
-            <button type="submit" class="btn btn-primary mx-auto d-block">Submit</button>
-          </form>
+        </div>
+        <div class="row my-4">
+            <div class="col-12">
+                <img class="img-fluid" src="https://via.placeholder.com/1440x200" alt="banner1"/>
+            </div>
+        </div>
     </div>
-    <div class="d-flex align-items-center h-100 w-100 justify-content-center">
-        <div id="result"></div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2">
+                <img class="img-fluid" src="https://via.placeholder.com/350x600" alt="banner1"/>
+            </div>
+            <div class="col-8">
+                <h1 class="text-center font-weight-bold">DLTIK.IO</h1>
+                <div class="d-flex align-items-start w-100 justify-content-center">
+                    <form class="w-25" onsubmit="submitTiktok(event)">
+                        <div class="form-group text-center">
+                          <label class="d-none" for="video_url">Tiktok Video URL</label>
+                          <input type="url" class="form-control text-center" name="video_url" id="video_url" aria-describedby="urlHelp" placeholder="Enter video URL">
+                          <small id="urlHelp" class="form-text text-muted">Paste your video URL.</small>
+                        </div>
+                        <button type="submit" class="btn btn-primary mx-auto d-block">Submit</button>
+                      </form>
+                </div>
+                <div class="d-flex w-100 justify-content-center mt-5">
+                    <div id="result"></div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col">
+                        <div class="text-center">
+                            <img class="img-fluid" src="./assets/images/endless.png" loading="lazy" height="125" width="137">
+                        </div>
+                        <div class="text-center">
+                            <h4 class="text-color--main u-bigger-text">Unlimited downloads</h4>
+                            <div>Save as many videos as you need, no limits or any other restrictions.</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="text-center">
+                            <img class="img-fluid" src="./assets/images/no-watermark.png" loading="lazy" height="125" width="134.25">
+                        </div>
+                        <div class="text-center">
+                            <h4 class="text-color--main u-bigger-text">No Watermark!</h4>
+                            <div>TikTok video download without watermark, remove a TT logo.</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="text-center img-wrapper">
+                            <img src="./assets/images/audio.png" class="img-fluid" loading="lazy" height="125" width="150">
+                        </div>
+                        <div class="text-center">
+                            <h4 class="text-color--main u-bigger-text">MP4 and MP3 supported</h4>
+                            <div>Save videos in hd quality, MP4 file format or convert to audio MP3.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-12 text-center">
+                        <h1>TikTok video download without watermark</h1>
+                        <p>ssstik.io is a free tool helping you download TikTok video (Musically) without watermarks online. Save TikTok video with the best quality in an MP4 file format with HD resolution. To find out how to use the TikTok video downloader, follow the instructions below. It’s simple - you can save TikToks without watermark in three easy steps.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-2">
+                <img class="img-fluid" src="https://via.placeholder.com/350x600" alt="banner1"/>
+            </div>
+        </div>
     </div>
+    
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
     async function submitTiktok(event){
